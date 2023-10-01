@@ -12,11 +12,11 @@ emojis: str = ""
 secret_word: str = "python"
 guess_word: str = input("What is your 6-letter guess? ")
 while len(guess_word) != len(secret_word):
-    guess_word: str = input("That was not 6 letters! Try again: ")
+    guess_word = input("That was not 6 letters! Try again: ")
 
 while index < len(secret_word):
     if secret_word[index] == guess_word[index]:
-            emojis += GREEN_BOX
+        emojis += GREEN_BOX
     else:
         exists: bool = False
         alternate_index: int = 0
@@ -34,6 +34,6 @@ while index < len(secret_word):
 print(emojis)
 
 if str(guess_word) != str(secret_word) and len(guess_word) == len(secret_word):
-         print("Not quite. Play again soon!")
+    print("Not quite. Play again soon!")
 if str(guess_word) == str(secret_word) and len(guess_word) == len(secret_word):
-      print("Woo! You got it!")
+    print("Woo! You got it!")
