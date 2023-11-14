@@ -1,11 +1,11 @@
-"""Implementing algorithms to practice utility fucntions with lists"""
+"""Implementing algorithms to practice utility fucntions with lists."""
 
 __author__ = "730710742"
 
 
-def all(integer_list: list, search_integer: int) -> bool:
+def all(integer_list: list[int], search_integer: int) -> bool:
+    """Returns true or false depending on whether or not all the integers in a list equal another given integr."""
     index: int = 0
-    integer_sum: int = 0
     if len(integer_list) == 0:
         return False
     while index < len(integer_list):
@@ -15,7 +15,8 @@ def all(integer_list: list, search_integer: int) -> bool:
     return True
 
 
-def max(input: list) -> int:
+def max(input: list[int]) -> int:
+    """Returns the largest integer found in a list of integers."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     index: int = 0
@@ -27,7 +28,8 @@ def max(input: list) -> int:
     return max_int
 
 
-def is_equal(list_one: list, list_two: list) -> bool:
+def is_equal(list_one: list[int], list_two: list[int]) -> bool:
+    """Rteurns true or flase depesning on if the two given lists are equal to each other."""
     index: int = 0
     if len(list_one) != len(list_two):
         return False
