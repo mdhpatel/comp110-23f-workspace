@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+__author__ = 730710742
+
 
 class Node:
     """My Node class for linked lists."""
@@ -22,11 +24,17 @@ class Node:
         else:
             return f"{self.data} -> {self.next}"
         
-    def head(self):
-        return None
+    def head(self) -> int:
+        """Return the data type for the first node in the list."""
+        return self.data
     
-    def tail(self):
-        return None
+    def tail(self) -> Node | None:
+        """Returns the list of nodes overall."""
+        return self.next
     
-    def last(self):
-        return None
+    def last(self) -> int | None:
+        """Returns the data type for the last node in the recursive list."""
+        if self.next is None:
+            return self.data
+        else:
+            return self.next.last()
